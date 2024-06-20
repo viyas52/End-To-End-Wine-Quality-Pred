@@ -18,7 +18,6 @@ list_of_files = [
     f"src/entity/__init__.py",
     f"src/entity/config_entity.py",
     f"src/exception/__init__.py",
-    f"src/exception/custom_exception.py",
     f"src/constants/__init__.py",
     "config/config.yaml",
     "params.yaml",

@@ -1,5 +1,5 @@
 import os
-from src.exception.custom_exception import CustomException
+from src.exception import CustomException
 import yaml
 from src import logging
 import json
