@@ -8,8 +8,8 @@ from src.pipeline.stage_02_data_validation import DataValidationTraningPipeline
 STAGE_NAME = "data ingestion stage"
 try:
     logging.info(f'>>>>>>> stage {STAGE_NAME} started <<<<<<<<')
-    obj = DataIngestiontrainingPipeline()
-    obj.main()
+    data_ingestion = DataIngestiontrainingPipeline()
+    data_ingestion.main()
     logging.info(f'>>>>>>>>>>>>> {STAGE_NAME} completed <<<<<<<<<<< \n\n x=========================x')
                     
 except Exception as e :
