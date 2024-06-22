@@ -3,6 +3,7 @@ from src.pipeline.stage_01_data_ingestion import DataIngestiontrainingPipeline
 from src.exception import CustomException
 import sys
 from src.pipeline.stage_02_data_validation import DataValidationTraningPipeline
+from src.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
 
 
 STAGE_NAME = "data ingestion stage"
@@ -21,6 +22,17 @@ try:
     logging.info(f'>>>>>>> stage {STAGE_NAME} started <<<<<<<<')
     data_validation=DataValidationTraningPipeline()
     data_validation.main()
+    logging.info(f'>>>>>>>>>>>>> {STAGE_NAME} completed <<<<<<<<<<< \n\n x=========================x')
+                    
+except Exception as e :
+    raise CustomException(e,sys)
+
+
+STAGE_NAME = "data transformation stage"
+try:
+    logging.info(f'>>>>>>> stage {STAGE_NAME} started <<<<<<<<')
+    data_transformation=DataTransformationTrainingPipeline()
+    data_transformation.main()
     logging.info(f'>>>>>>>>>>>>> {STAGE_NAME} completed <<<<<<<<<<< \n\n x=========================x')
                     
 except Exception as e :
