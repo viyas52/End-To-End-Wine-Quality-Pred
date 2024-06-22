@@ -12,6 +12,8 @@ class DataTransformation:
     def preprocessing(self):
         df = pd.read_csv(self.config.data_path)
         
+        df['quality']=df['quality'].apply(lambda y_value:1 if y_value>=7 else 0)
+        
         tar_col = df['quality']
         
         train,test = train_test_split(df,random_state=2,test_size=0.2,stratify=tar_col)
