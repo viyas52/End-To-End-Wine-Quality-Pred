@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/My%20Workspace/proj_file/End-To-End-Wine-Quality-Pred/mlruns/0/c9be8909096f4f23af41a6fe53a4fe93/artifacts
+end_time: 1719062585183
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c9be8909096f4f23af41a6fe53a4fe93
+run_name: magnificent-bird-379
+run_uuid: c9be8909096f4f23af41a6fe53a4fe93
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719062582002
+status: 3
+tags: []
+user_id: VIYAS
