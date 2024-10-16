@@ -36,11 +36,17 @@ def index():
             alcohol =float(request.form['alcohol'])
        
          
-            data = [fixed_acidity,volatile_acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,pH,sulphates,alcohol]
-            data = np.array(data).reshape(1, 11)
+            x = np.array([[fixed_acidity,volatile_acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,pH,sulphates,alcohol]])
             
             obj = PredictionPipeline()
-            predict = obj.predict(data)
+            
+            feature_names = ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 
+                            'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density', 
+                            'pH', 'sulphates', 'alcohol']
+            
+            input = pd.DataFrame(x,columns=feature_names)
+            
+            predict = obj.predict(input)
 
             return render_template('results.html', prediction = str(predict))
 
